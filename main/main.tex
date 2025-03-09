@@ -1,0 +1,16 @@
+%% Преамбула TeX-файла
+
+% 1. Стиль и язык
+\documentclass[utf8x, 12pt]{G7-32} % Стиль (по умолчанию будет 14pt)
+\usepackage{st-bpi}
+\usepackage{import}
+
+\subimport{../document/}{preamble}
+\subimport{../document/}{title-page-preamble}
+
+\begin{document} % преамбула документа
+    
+    \subimport{../document/}{document}
+    % \input{../document/document}
+
+\end{document}

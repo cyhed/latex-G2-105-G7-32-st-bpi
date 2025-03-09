@@ -1,0 +1,36 @@
+\KTitlePage{Название}
+
+
+
+\frontmatter % выключает нумерацию ВСЕГО; здесь начинаются ненумерованные главы: реферат, введение, глоссарий, сокращения и прочее.
+
+\input{../document/lab chapter/lab document} %вставка глав для лабораторной работы
+
+\tableofcontents % Содержание
+
+\newpage ~ % для бланка задания
+
+\input{../document/chapter/0-standart}
+
+\input{../document/chapter/0-introduction}
+
+
+\mainmatter % нумерованная часть документа
+
+\input{../document/chapter/31-chapter-one}
+
+\input{../document/chapter/32-chapter-two}
+
+
+
+\backmatter %% Здесь заканчивается нумерованная часть документа и начинаются ссылки и
+           
+
+\input{../document/chapter/999-conclusion}  %% заключение
+
+\input{../document/biblio/biblio}
+
+\appendix   % Тут идут приложения
+
+
+\input{../document/chapter/61-appendix}

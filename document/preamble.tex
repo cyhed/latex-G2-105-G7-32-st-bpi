@@ -1,0 +1,107 @@
+\sloppy
+
+
+% Добавляем гипертекстовое оглавление в PDF и метаданные
+\usepackage[
+bookmarks=true, colorlinks=true, unicode=true,
+urlcolor=black,linkcolor=black, anchorcolor=black,
+citecolor=black, menucolor=black, filecolor=black,
+pdfstartpage=1,
+    pdftex,
+            pdfauthor={Зотолов Владислав Владимирович},
+            pdftitle={ },
+            pdfsubject={БрГТУ МС-7 \the\year},
+            pdfkeywords={},            
+]{hyperref}
+%% возможные значения по умолнанию
+% Приложение:           pdfproducer={pdfTeX-1.40.25},
+% Производитель PDF:    pdfcreator={LaTeX with hyperref}
+%%
+
+
+% Изменение начертания шрифта --- после чего выглядит таймсоподобно.
+% apt-get install scalable-cyrfonts-tex
+
+\IfFileExists{cyrtimes.sty}
+    {
+        \usepackage{cyrtimespatched}
+    }
+    {
+        % А если Times нету, то будет CM...
+    }
+
+
+\usepackage{graphicx}   % Пакет для включения рисунков
+\DeclareGraphicsExtensions{.jpg,.pdf,.png}
+\graphicspath{{Source/img/}}    % расположение рисунков 
+\usepackage{float} % Для опции фигур [H]
+
+
+% С такими оно полями оно работает по-умолчанию:
+%\RequirePackage[left=20mm,right=10mm,top=20mm,bottom=20mm,headsep=0pt]{geometry}
+% Если вас тошнит от поля в 10мм --- увеличивайте до 20-ти, ну и про переплёт не забывайте:
+\geometry{right=20mm}
+\geometry{left=30mm}
+\geometry{headsep=5mm} % чтоб код зачетки не налазил на главы
+
+
+% Настройки стиля ГОСТ 7-32
+% Для начала определяем, хотим мы или нет, чтобы рисунки и таблицы нумеровались в пределах раздела, или нам нужна сквозная нумерация.
+\EqInChapter % формулы будут нумероваться в пределах раздела
+\TableInChapter % таблицы будут нумероваться в пределах раздела
+\PicInChapter % рисунки будут нумероваться в пределах раздела
+
+
+% Произвольная нумерация списков.
+\usepackage{enumerate}
+
+\setcounter{tocdepth}{1} %Подробность оглавления
+%5 это chapter, section, subsection, subsubsection и paragraph
+%4 это chapter, section, subsection и subsubsection
+%3 это chapter, section, и subsection
+%2 это chapter и section
+%1 это chapter.
+%0 ничего
+
+
+\usepackage{subfigure} %https://latex-tutorial.com/subfigure-latex/
+%%
+%Необходима для правильности отображения ссылок на на subfigure при нумерации figure по главам
+% https://tex.stackexchange.com/questions/115712/figure-numbering-with-section-number-problem-with-subfigure
+\makeatletter 
+\renewcommand\p@subfigure{\thefigure}
+\makeatother
+%%
+
+
+%% настройка листинга
+\usepackage{listings}
+
+\lstdefinestyle{mystyle}{
+    language=[Sharp]C, % язык программирования
+    frame=none, % без рамки
+    xleftmargin=1mm, % отступ слева
+    xrightmargin=1mm, % оступ справа
+    breaklines=true, % переносить строки
+    extendedchars=false,
+    keepspaces=true,
+    basicstyle=\normalsize	
+}
+% Возможные парамеметры basicstyle , настраиваюшие размер шрифта
+%\tiny	
+%\scriptsize	
+%\footnotesize	
+%\small	
+%\normalsize	
+%\large
+%\Large	
+%\LARGE	
+%\huge	
+%\Huge	
+\lstset{style=mystyle}
+%%
+
+% настройка отображения источников \nocite означает что они будут добавленны даже если в тексте не использовались ссылки.
+% если закомментировать, то отображаться будут только те источники на которых ссылались
+\nocite{*}
+%%

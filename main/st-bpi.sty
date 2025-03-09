@@ -1,0 +1,170 @@
+\ProvidesPackage{st-bpi}[2009/11/11 v1.01, by Computers & Systems dept. of BrSTU, http://www.bstu.by]
+
+\RequirePackage{lastpage} % для коректного отображения количества страниц
+                            % счетчик в G2-105 \totalpages работал некоректно
+%стандартные части
+\iffalse %начало много строчного комментария 1
+
+\newcommand\Executors{%список исполнителей
+\chapter*{\CYRS\cyrp\cyri\cyrs\cyro\cyrk~%
+\cyri\cyrs\cyrp\cyro\cyrl\cyrn\cyri\cyrt\cyre\cyrl\cyre\cyrishrt}%
+}
+\newcommand\Referat{%реферат
+\chapter*{\CYRR\cyre\cyrf\cyre\cyrr\cyra\cyrt}%
+}
+\addto\captionsrussian{%содержание
+\def\contentsname{%
+\CYRS\cyro\cyrd\cyre\cyrr\cyrzh\cyra\cyrn\cyri\cyre}%
+}
+\newcommand\NormRefs{%нормативные ссылки
+\chapter*{\CYRN\cyro\cyrr\cyra\cyrt\cyri\cyrv\cyrn\cyrery\cyre~%
+\cyrs\cyrs\cyrery\cyrl\cyrk\cyri}%
+}
+\newcommand\Defines{%определения
+\chapter*{\CYRO\cyrp\cyrr\cyre\cyrd\cyrl\cyre\cyrn\cyri\cyrya}%
+}
+\newcommand\Abbreviations{%обозначения и сокращения
+\chapter*{\CYRO\cyrb\cyro\cyrz\cyrn\cyra\cyrch\cyre\cyrn\cyri\cyrya~\cyri~%
+\cyrs\cyro\cyrk\cyrr\cyra\cyrshch\cyre\cyrn\cyri\cyrya}%
+}
+\newcommand\Introduction{%введение
+\chapter{\CYRV\cyrv\cyre\cyrd\cyre\cyrn\cyri\cyre}%
+}
+\newcommand\Conclusion{%заключение
+\chapter{\CYRZ\cyra\cyrk\cyrl\cyryu\cyrch\cyre\cyrn\cyri\cyre}%
+}
+\addto\captionsrussian{%список использованных источников
+\def\bibname{%
+\CYRS\cyrp\cyri\cyrs\cyro\cyrk~
+\cyri\cyrs\cyrp\cyro\cyrl\cyrsftsn\cyrz\cyro\cyrv\cyra\cyrn\cyrn\cyrery\cyrh~
+\cyri\cyrs\cyrt\cyro\cyrch\cyrn\cyri\cyrk\cyro\cyrv}%
+}
+
+
+\fi % конец многострочного комментария 1
+
+%титульная страница
+%\newcommand\Nir@UdkName{\CYRU\CYRD\CYRK}
+%\newcommand\Nir@No{%
+% \No~\cyrg\cyro\cyrs\cyrr\cyre\cyrg\cyri\cyrs\cyrt\cyrr\cyra\cyrc\cyri\cyri%
+%}
+%\newcommand\Nir@Confirm{
+% {\small\CYRU\CYRT\CYRV\CYRE\CYRR\CYRZH\CYRD\CYRA\CYRYU}%
+%}
+%\newcommand\Nir@InventarNo{
+% \CYRI\cyrn\cyrv.~\No
+%}
+
+% был изменен 
+\newcommand\Nir@KOtchet{{%
+\small\CYRP\CYRO\CYRYA\CYRS\CYRN\CYRI\CYRT\CYRE\CYRL\CYRSFTSN\CYRN\CYRA\CYRYA{} \CYRZ\CYRA\CYRP\CYRI\CYRS\CYRK\CYRA{} \CYRK{} \CYRK\CYRU\CYRR\CYRS\CYRO\CYRV\CYRO\CYRM\CYRU{} \CYRP\CYRR\CYRO\CYRE\CYRK\CYRT\CYRU{} \\ %Пояснительная записка к курсовому проекту
+\cyrp\cyro{} \cyrd\cyri\cyrs\cyrc\cyri\cyrp\cyrl\cyri\cyrn\cyre{} <<\CYRO\cyrb\cyrsftsn\cyre\cyrk\cyrt\cyrn\cyro-\cyro\cyrr\cyri\cyre\cyrn\cyrt\cyri\cyrr\cyro\cyrv\cyra\cyrn\cyrn\cyro\cyre{} \cyrp\cyrr\cyro\cyrg\cyrr\cyra\cyrm\cyrm\cyri\cyrr\cyro\cyrv\cyra\cyrn\cyri\cyre{}>>
+}}
+% остался
+\iffalse % закоментированно до \fi
+\newcommand\Nir@MainBegin{%
+\CYRR\cyru\cyrk\cyro\cyrv\cyro\cyrd\cyri\cyrt\cyre\cyrl\cyrsftsn{} %
+\CYRN\CYRI\CYRR%
+}
+% остался
+\newcommand\Nir@OrgLongName{%
+\CYRP\cyro\cyrl\cyrn\cyro\cyre~
+\cyrn\cyra\cyrz\cyrv\cyra\cyrn\cyri\cyre~
+\cyro\cyrr\cyrg\cyra\cyrn\cyri\cyrz\cyra\cyrc\cyri\cyri%
+}
+%остался
+\newcommand\Nir@BossPost{%
+\CYRK\cyrt\cyro \newline
+\cyru\cyrt\cyrv\cyre\cyrr\cyrzh\cyrd\cyra\cyre\cyrt%
+}
+% остался
+\newcommand\Nir@BossName{\CYRF.~\CYRI.~\CYRO}
+% остался
+\newcommand\Nir@Year{\the\year}
+% остался
+\newcommand\Nir@Town{\CYRG\cyro\cyrr\cyro\cyrd}
+% изменен
+\newcommand\Nir@ManagerPost{%
+\CYRV\cyrery\cyrp\cyro\cyrl\cyrn\cyri\cyrl
+}
+% остался
+\newcommand\Nir@ManagerName{\CYRI\cyrv\cyra\cyrn\cyro\cyrv}
+\fi
+
+% новое
+\newcommand\Nir@DeptBossPost{%
+\CYRP\cyrr\cyro\cyrv\cyre\cyrr\cyri\cyrl%
+}
+% новое
+\newcommand\Nir@DeptBossName{\CYRI\cyrv\cyra\cyrn\cyro\cyrv}
+% новое
+\newcommand\Nir@Code{\CYRK\cyro\cyrd}
+% новое
+\newcommand\Nir@Add{\CYRP\cyrr\cyri\cyrl\cyro\cyrzh\cyre\cyrn\cyri\cyre{} \CYRA}
+
+
+\newcommand\KTitlePage[1]{
+\thispagestyle{empty}
+\begin{centering}
+\begin{flushright}
+\Nir@Add
+\end{flushright}
+\linespread{1.1}\normalsize
+{\Nir@OrgLongName}%
+\vfill
+\vfill
+\vfill
+\textbf{#1}
+\vspace{8mm}
+
+\Nir@KOtchet
+
+% \vfill
+\vspace{8mm}
+\Nir@Code
+
+\vfill
+\begin{tabular}{p{120mm}p{57mm}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ ~ & \CYRL\cyri\cyrs\cyrt\cyro\cyrv~ \textbf{\pageref{LastPage}}
+\end{tabular}
+\vfill
+\begin{tabular}{p{120mm}p{57mm}}
+\textbf{\Nir@ManagerPost} & \Nir@ManagerName
+\\
+~ & ~
+\\
+\textbf{\Nir@DeptBossPost} & \Nir@DeptBossName
+\\
+
+\end{tabular}
+\vfill
+\vfill
+\vfill
+\Nir@Town~\Nir@Year
+
+\end{centering}
+\linespread{\Gost@LineSpread}\normalsize
+}
+% настройка стиля стриниц
+\iftrue
+%\pagestyle{myFheadings} % устанавливает данный стиль , со сбросом предыдущих
+%% есть  еще headings
+\renewcommand{\@evenhead}{\hfil \Nir@Code \hfil \thepage} % настройка верхнего колонтитула
+\renewcommand{\@oddhead}{\hfil \Nir@Code \hfil \thepage} % настройка верхнего колонтитула
+%%\renewcommand{\@evenfoot}{\hfil \Nir@Code \hfil \thepage} % настройка нижнего колонтитула
+%%\renewcommand{\@oddfoot}{\hfil \Nir@Code \hfil \thepage} % настройка нижнего колонтитула
+%%\thepage\hfil\slshape\leftmark страницы слево
+%%{\slshape\rightmark}\hfil\thepage  страницы справо
+\fi
+
+%Эти команды нужно вызвать для корректного определения титульной страницы
+\newcommand\KRegion[1]{\renewcommand\Nir@Town{#1}}
+\newcommand\KOrganization[1]{\renewcommand\Nir@OrgLongName{#1}}
+%\newcommand\NirBoss[2]{\renewcommand\Nir@BossPost{#1}\renewcommand\Nir@BossName{#2}}
+\newcommand\KSupervisor[2]{\renewcommand\Nir@DeptBossPost{#1}\renewcommand\Nir@DeptBossName{#2}}
+%\newcommand\NirYear[1]{\renewcommand\Nir@Year{#1}}
+\newcommand\KAuthor[2]{\renewcommand\Nir@ManagerPost{#1}\renewcommand\Nir@ManagerName{#2}}
+\newcommand\KCode[1]{\renewcommand\Nir@Code{\textbf{#1}}}
+\newcommand\KSubject[1]{\renewcommand\Nir@KOtchet{#1}}
+\newcommand\KAdd[1]{\renewcommand\Nir@Add{#1}}
