@@ -105,4 +105,20 @@ pdfstartpage=1,
 % если закомментировать, то отображаться будут только те источники на которых ссылались
 \nocite{*}
 %%
+
+
+% Расскометируйте строчку ниже если хотите добавить фон в весь файл
+% Тогда каждой странице исходного файла будет соответсвовать страница файла с фоном
+% Размер файла с фонами, в страницах, должен быть >= размеру  исходного файла
+% Данный макрос взят отсюда: https://habr.com/ru/articles/163315/
+%\newcommand{\overlaypass}
+
+\usepackage{eso-pic}
+
+\ifdefined\overlaypass
+\newcounter{overlaypage}
+\setcounter{overlaypage}{1}
+\AddToShipoutPicture{\AtPageLowerLeft{\includegraphics[page=\arabic{overlaypage}]
+{../Source/img/test3.pdf}\stepcounter{overlaypage}}}
+\fi
 %%
