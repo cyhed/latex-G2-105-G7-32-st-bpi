@@ -1,1 +1,11 @@
 /output
+*.aux
+*.bbl
+*.blg
+*.fls
+*.log
+*.out
+*.toc
+*.fdb_latexmk
+*.synctex.gz
+/main/*.pdf
