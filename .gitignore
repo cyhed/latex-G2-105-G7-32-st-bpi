@@ -10,4 +10,5 @@
 *.synctex.gz
 *.lot
 *.lof
+*.synctex(busy)
 /main/*.pdf
