@@ -126,5 +126,16 @@ pdfstartpage=1,
 
 % установка стиля страниц
 % изначально определлены в файле G2-105.sty : headings и myheadings
+% дополниетльно определены в st-bpi : headingsWithCode и void
+% void - пустые колонтитулы
+% headingsWithCode - 
+%   верхний колонтитул: 
+%       по центру: код зачетки из команды(\KCode{код}, 
+%           а также установите  headsep >=5 ()
+%               \geometry{headsep=5mm}) - уже стоит
+%       справа: номер страницы     
+%myheadings -  
+%   верхний колонтитул: 
+%       справа: номер страницы 
 \pagestyle{headingsWithCode}
 %%

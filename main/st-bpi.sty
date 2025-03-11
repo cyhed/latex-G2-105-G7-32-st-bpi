@@ -178,3 +178,13 @@
     \let\chaptermark\@gobble
     \let\sectionmark\@gobble
 }
+
+\def\ps@void{%
+    \let\@oddfoot\@empty
+    \let\@evenfoot\@empty
+    \def\@evenhead\@empty%
+    \def\@oddhead\@empty%
+    \let\@mkboth\@gobbletwo
+    \let\chaptermark\@gobble
+    \let\sectionmark\@gobble
+}
