@@ -148,10 +148,8 @@
 }
 % настройка стиля стриниц
 \iftrue
-%\pagestyle{myFheadings} % устанавливает данный стиль , со сбросом предыдущих
-%% есть  еще headings
-\renewcommand{\@evenhead}{\hfil \Nir@Code \hfil \thepage} % настройка верхнего колонтитула
-\renewcommand{\@oddhead}{\hfil \Nir@Code \hfil \thepage} % настройка верхнего колонтитула
+%\renewcommand{\@evenhead}{\hfil \Nir@Code \hfil \thepage} % настройка верхнего колонтитула
+%\renewcommand{\@oddhead}{\hfil \Nir@Code \hfil \thepage} % настройка верхнего колонтитула
 %%\renewcommand{\@evenfoot}{\hfil \Nir@Code \hfil \thepage} % настройка нижнего колонтитула
 %%\renewcommand{\@oddfoot}{\hfil \Nir@Code \hfil \thepage} % настройка нижнего колонтитула
 %%\thepage\hfil\slshape\leftmark страницы слево
@@ -168,3 +166,15 @@
 \newcommand\KCode[1]{\renewcommand\Nir@Code{\textbf{#1}}}
 \newcommand\KSubject[1]{\renewcommand\Nir@KOtchet{#1}}
 \newcommand\KAdd[1]{\renewcommand\Nir@Add{#1}}
+
+
+%%
+\def\ps@headingsWithCode{%
+    \let\@oddfoot\@empty
+    \let\@evenfoot\@empty
+    \def\@evenhead{\hfil \Nir@Code \hfil \thepage}%
+    \def\@oddhead{\hfil \Nir@Code \hfil \thepage}%
+    \let\@mkboth\@gobbletwo
+    \let\chaptermark\@gobble
+    \let\sectionmark\@gobble
+}
