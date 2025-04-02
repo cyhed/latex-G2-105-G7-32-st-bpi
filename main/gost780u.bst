@@ -1218,7 +1218,7 @@ FUNCTION {format.urldate}
   
 FUNCTION {online}
 { output.bibitem
-  format.authors output dash.word
+  format.authors "author" output.check
   format.btitle output xspace.word  
   howpublished output 
   format.url output xspace.word  
