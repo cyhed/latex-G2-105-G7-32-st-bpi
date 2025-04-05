@@ -44,84 +44,69 @@
 \fi % конец многострочного комментария 1
 
 %титульная страница
-%\newcommand\Nir@UdkName{\CYRU\CYRD\CYRK}
-%\newcommand\Nir@No{%
+%\newcommand\BSTU@UdkName{\CYRU\CYRD\CYRK}
+%\newcommand\BSTU@No{%
 % \No~\cyrg\cyro\cyrs\cyrr\cyre\cyrg\cyri\cyrs\cyrt\cyrr\cyra\cyrc\cyri\cyri%
 %}
-%\newcommand\Nir@Confirm{
+%\newcommand\BSTU@Confirm{
 % {\small\CYRU\CYRT\CYRV\CYRE\CYRR\CYRZH\CYRD\CYRA\CYRYU}%
 %}
-%\newcommand\Nir@InventarNo{
+%\newcommand\BSTU@InventarNo{
 % \CYRI\cyrn\cyrv.~\No
 %}
-
-% был изменен 
-\newcommand\Nir@KOtchet{{%
+\newcommand\BSTU@Otchet{{%
 \small\CYRP\CYRO\CYRYA\CYRS\CYRN\CYRI\CYRT\CYRE\CYRL\CYRSFTSN\CYRN\CYRA\CYRYA{} \CYRZ\CYRA\CYRP\CYRI\CYRS\CYRK\CYRA{} \CYRK{} \CYRK\CYRU\CYRR\CYRS\CYRO\CYRV\CYRO\CYRM\CYRU{} \CYRP\CYRR\CYRO\CYRE\CYRK\CYRT\CYRU{} \\ %Пояснительная записка к курсовому проекту
 \cyrp\cyro{} \cyrd\cyri\cyrs\cyrc\cyri\cyrp\cyrl\cyri\cyrn\cyre{} <<\CYRO\cyrb\cyrsftsn\cyre\cyrk\cyrt\cyrn\cyro-\cyro\cyrr\cyri\cyre\cyrn\cyrt\cyri\cyrr\cyro\cyrv\cyra\cyrn\cyrn\cyro\cyre{} \cyrp\cyrr\cyro\cyrg\cyrr\cyra\cyrm\cyrm\cyri\cyrr\cyro\cyrv\cyra\cyrn\cyri\cyre{}>>
 }}
-% остался
-\iffalse % закоментированно до \fi
-\newcommand\Nir@MainBegin{%
+\newcommand\BSTU@MainBegin{%
 \CYRR\cyru\cyrk\cyro\cyrv\cyro\cyrd\cyri\cyrt\cyre\cyrl\cyrsftsn{} %
 \CYRN\CYRI\CYRR%
 }
-% остался
-\newcommand\Nir@OrgLongName{%
+\newcommand\BSTU@OrgLongName{%
 \CYRP\cyro\cyrl\cyrn\cyro\cyre~
 \cyrn\cyra\cyrz\cyrv\cyra\cyrn\cyri\cyre~
 \cyro\cyrr\cyrg\cyra\cyrn\cyri\cyrz\cyra\cyrc\cyri\cyri%
 }
-%остался
-\newcommand\Nir@BossPost{%
+\newcommand\BSTU@BossPost{%
 \CYRK\cyrt\cyro \newline
 \cyru\cyrt\cyrv\cyre\cyrr\cyrzh\cyrd\cyra\cyre\cyrt%
 }
-% остался
-\newcommand\Nir@BossName{\CYRF.~\CYRI.~\CYRO}
-% остался
-\newcommand\Nir@Year{\the\year}
-% остался
-\newcommand\Nir@Town{\CYRG\cyro\cyrr\cyro\cyrd}
-% изменен
-\newcommand\Nir@ManagerPost{%
+\newcommand\BSTU@BossName{\CYRF.~\CYRI.~\CYRO}
+\newcommand\BSTU@Year{\the\year}
+\newcommand\BSTU@Town{\CYRG\cyro\cyrr\cyro\cyrd}
+\newcommand\BSTU@ManagerPost{%
 \CYRV\cyrery\cyrp\cyro\cyrl\cyrn\cyri\cyrl
 }
-% остался
-\newcommand\Nir@ManagerName{\CYRI\cyrv\cyra\cyrn\cyro\cyrv}
-\fi
-
-% новое
-\newcommand\Nir@DeptBossPost{%
+\newcommand\BSTU@ManagerName{\CYRI\cyrv\cyra\cyrn\cyro\cyrv}
+\newcommand\BSTU@DeptBossPost{%
 \CYRP\cyrr\cyro\cyrv\cyre\cyrr\cyri\cyrl%
 }
-% новое
-\newcommand\Nir@DeptBossName{\CYRI\cyrv\cyra\cyrn\cyro\cyrv}
-% новое
-\newcommand\Nir@Code{\CYRK\cyro\cyrd}
-% новое
-\newcommand\Nir@Add{\CYRP\cyrr\cyri\cyrl\cyro\cyrzh\cyre\cyrn\cyri\cyre{} \CYRA}
+
+\newcommand\BSTU@DeptBossName{\CYRI\cyrv\cyra\cyrn\cyro\cyrv}
+
+\newcommand\BSTU@Code{\CYRK\cyro\cyrd}
+\newcommand\BSTU@Add{\CYRP\cyrr\cyri\cyrl\cyro\cyrzh\cyre\cyrn\cyri\cyre{} \CYRA}
 
 
 \newcommand\KTitlePage[1]{
 \thispagestyle{empty}
 \begin{centering}
 \begin{flushright}
-\Nir@Add
+\BSTU@Add
 \end{flushright}
 \linespread{1.1}\normalsize
-{\Nir@OrgLongName}%
+{\BSTU@OrgLongName}%
 \vfill
 \vfill
 \vfill
 \textbf{#1}
 \vspace{8mm}
 
-\Nir@KOtchet
+\BSTU@Otchet
 
 % \vfill
 \vspace{8mm}
-\Nir@Code
+\BSTU@Code
 
 \vfill
 \begin{tabular}{p{120mm}p{57mm}}
@@ -130,18 +115,18 @@
 \end{tabular}
 \vfill
 \begin{tabular}{p{120mm}p{57mm}}
-\textbf{\Nir@ManagerPost} & \Nir@ManagerName
+\textbf{\BSTU@ManagerPost} & \BSTU@ManagerName
 \\
 ~ & ~
 \\
-\textbf{\Nir@DeptBossPost} & \Nir@DeptBossName
+\textbf{\BSTU@DeptBossPost} & \BSTU@DeptBossName
 \\
 
 \end{tabular}
 \vfill
 \vfill
 \vfill
-\Nir@Town~\Nir@Year
+\BSTU@Town~\BSTU@Year
 
 \end{centering}
 \linespread{\Gost@LineSpread}\normalsize
@@ -157,23 +142,22 @@
 \fi
 
 %Эти команды нужно вызвать для корректного определения титульной страницы
-\newcommand\KRegion[1]{\renewcommand\Nir@Town{#1}}
-\newcommand\KOrganization[1]{\renewcommand\Nir@OrgLongName{#1}}
-%\newcommand\NirBoss[2]{\renewcommand\Nir@BossPost{#1}\renewcommand\Nir@BossName{#2}}
-\newcommand\KSupervisor[2]{\renewcommand\Nir@DeptBossPost{#1}\renewcommand\Nir@DeptBossName{#2}}
-%\newcommand\NirYear[1]{\renewcommand\Nir@Year{#1}}
-\newcommand\KAuthor[2]{\renewcommand\Nir@ManagerPost{#1}\renewcommand\Nir@ManagerName{#2}}
-\newcommand\KCode[1]{\renewcommand\Nir@Code{\textbf{#1}}}
-\newcommand\KSubject[1]{\renewcommand\Nir@KOtchet{#1}}
-\newcommand\KAdd[1]{\renewcommand\Nir@Add{#1}}
-
+\newcommand\KRegion[1]{\renewcommand\BSTU@Town{#1}}
+\newcommand\KOrganization[1]{\renewcommand\BSTU@OrgLongName{#1}}
+%\newcommand\BSTUBoss[2]{\renewcommand\BSTU@BossPost{#1}\renewcommand\BSTU@BossName{#2}}
+\newcommand\KSupervisor[2]{\renewcommand\BSTU@DeptBossPost{#1}\renewcommand\BSTU@DeptBossName{#2}}
+\newcommand\BSTUYear[1]{\renewcommand\BSTU@Year{#1}}
+\newcommand\KAuthor[2]{\renewcommand\BSTU@ManagerPost{#1}\renewcommand\BSTU@ManagerName{#2}}
+\newcommand\KCode[1]{\renewcommand\BSTU@Code{\textbf{#1}}}
+\newcommand\KSubject[1]{\renewcommand\BSTU@Otchet{#1}}
+\newcommand\KAdd[1]{\renewcommand\BSTU@Add{#1}}
 
 %% стиль для отобранения кода зачетки в верхнем колонтитуле
 \def\ps@headingsWithCode{%
     \let\@oddfoot\@empty
     \let\@evenfoot\@empty
-    \def\@evenhead{\hfil \Nir@Code \hfil \thepage}%
-    \def\@oddhead{\hfil \Nir@Code \hfil \thepage}%
+    \def\@evenhead{\hfil \BSTU@Code \hfil \thepage}%
+    \def\@oddhead{\hfil \BSTU@Code \hfil \thepage}%
     \let\@mkboth\@gobbletwo
     \let\chaptermark\@gobble
     \let\sectionmark\@gobble
