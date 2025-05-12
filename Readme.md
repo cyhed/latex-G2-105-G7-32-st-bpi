@@ -19,6 +19,7 @@
     - Windows -  install-tl-windows.exe
 
 - Для VScode установить плагин [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
+- А также плагин  для ужобства устанивите [LaTeX Utilities](https://marketplace.visualstudio.com/items/?itemName=tecosaur.latex-utilities)
 
 - Перейти C:\Users\%USER%\AppData\Roaming\Code\User\settings.json
     - добавте в основной файл строки из шаблонного settings.json
